@@ -71,7 +71,7 @@ const downloadVideo = (url, filePath, fileName, start, stop, res) => {
 
 
 const mergeVideoAndAudio = (fileName, start, stop, res) => {
-    if (stop < start || isNaN(stop) || isNaN(start)) {
+    if (Number(stop) < Number(start) || isNaN(stop) || isNaN(start)) {
         res.send("Invalid input");
         return;
     }
